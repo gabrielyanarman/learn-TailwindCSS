@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Main';
+import Banner from './components/Banner';
+import MainUtils from './components/Main/MainUtils'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+		<div className='App dark:bg-slate-900'>
+			<div className='max-w-screen-xl m-auto grid grid-rows-layout'>
+				<Header />
+				<div>
+					<MainUtils />
+					<Banner />
+					<Main />
+				</div>
+				<Footer />
+			</div>
+		</div>
+	)
 }
 
 export default App;
